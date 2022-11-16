@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    ---font_Titulos : 'Sono', sans-serif;
+    ---backgroundColor_Anuncios: #b3b8d3;
+    ---weight_Letra: 400;
+    ---font_Texto : 'Noto Serif', serif;
+    ---background_SoloTieneUnUso : #a7b9da;
+    ---border_Color : #7486a7;
+    ---background__Diversos: #e7e3eb;
+    ---margin_CambioSeccion : 10rem auto;
+}
+
+/* ==================================== features del header ==================================== */
+/* anuncion */
+
+.espacioHeader{
+    padding: .2rem 0rem;
+    background-color: rgba(116, 134, 167, 10%);
+}
+
+.anuncio{
+    background-color: var(---backgroundColor_Anuncios);
+    padding: .7rem 0rem;
+    margin-bottom: 1rem;
+    border-bottom: .12rem black solid;
+}
+
+.anuncioTexto{
+    font-family: var(---font_Titulos);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: var(---weight_Letra);
+}
+
+/* barra de navegacion */
+
+.nav{
+    display: flex;
+    width: 70%;
+    margin: 1rem auto;
+    
+}
+
+.empresa{
+    display: flex;
+    align-items: flex-end;
+    width: 30%
+}
+
+.empresaLogo{
+    width: 50px;
+}
+
+.empresaNombre{
+    font-size: 1.3rem;
+    margin-left: .3rem;
+}
+
+.enlaces{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+}
+
+.link, .acuentalink{
+    font-family: var(---font_Titulos);
+    text-decoration: none;
+    color: #000;
+    font-weight: var(---weight_Letra);
+    font-size: 1rem;
+}
+
+.login{
+    background-color: var(---background_SoloTieneUnUso);
+    padding: .7rem .9rem;
+    border-radius: 16px;
+    display: flex;
+}
+
+.loginLine{
+    border-left: .15rem black solid;
+    margin: 0 .5rem;
+}
+
+/* animaciones */
+.link:hover{
+    border-bottom: 1.5px solid black;
+}
+
+/* ==================================== features del menu de busqueda de index ==================================== */
+
+.imagenBusqueda{
+    background-image: url('../img/vecindario.jpeg');
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    height: 50rem;
+    width: 97%;
+    border-radius: 30px;
+}
+
+.posicionarBusqueda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerBusqueda{
+    width: 50%;
+    height: 60%;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+}
+
+.containerBusqueda h2{
+    font-family: var(---font_Titulos);
+    font-weight: var(---weight_Letra);
+    text-align: center;
+    padding: 5rem 0rem;
+    font-size: 3rem;
+    color: #000;
+}
+
+.elementosBusqueda{
+    width: 90%;
+    margin: 0 auto;
+}
+/* Botones de busqueda */
+.elementosBusqueda div:nth-child(1){
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botonBusqueda{
+    text-decoration: none;
+    color: #fff;
+    font-family: var(---font_Titulos);
+    font-weight: var(---weight_Letra);
+    font-size: 1rem;
+    padding: 1rem 1.8rem;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 60%);
+    border: 2px #fff solid;
+    transition: all 1s ease;
+}
+
+.botonBusqueda:hover{
+    color: #000;
+    background-color: rgba(167,185,218, 60%);
+    border: 2px var(---background__Diversos) solid;
+}
+
+
+
+/* Barra de busqueda y su boton */
+.elementosBusqueda div:nth-child(2){
+    height: 3rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBar{
+    width: 60%;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    border-left: 2px black solid;
+    border-right: none;
+    font-size: 1.2rem;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    /* padding: 1.32rem 1rem 1.65rem 1rem; resoluciones mayores a 1080 */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    outline: none;
+}
+
+.searchButton{
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    border-right: 2px black solid;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: none;
+    padding: 1.4rem .5rem 1.2rem .5rem;
+    width: 15%;
+    font-family: var(---font_Titulos);
+    font-weight: var(---weight_Letra);
+    font-size: 1rem;
+}
+
+.searchButton, .searchBar{
+    background-color: white;
+}
+
+.searchButton:hover{
+    cursor: pointer;
+}
+
+
+/* ==================================== caracteristicas de los lugares  ==================================== */
+
+.caracteristicas{
+    width: 70%;
+    margin: var(---margin_CambioSeccion);
+    height: 55rem;
+    transition: all 1s ease-out;
+}
+
+.caracteristicas:hover{
+    transform: translateY(-20px);
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    box-shadow: 0px 30px 14px 0px rgba(0,0,0,0.58);
+}
+
+.tituloCaracte{
+    text-align: center;
+    font-family: var(---font_Titulos);
+    font-weight: var(---weight_Letra);
+    font-size: 2.3rem;
+    margin-bottom: 5rem;
+}
+
+.tipoCaracte{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.tipoContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imgTipo, .tituloTipo, .textoTipo, .botonTipo{
+    margin-bottom: 1.5rem;
+}
+
+.imgTipo{
+    width: 30%;
+}
+
+.tituloTipo{
+    font-size: 1.3rem;
+    font-weight: var(---weight_Letra);
+    font-family: var(---font_Texto);
+}
+
+.containerTextoTipo{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.textoTipo{
+    font-family: var(---font_Texto);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.botonTipo{
+    width: 40%;
+    height: 3.8rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    border: 2px solid var(---border_Color);
+    background-color: var(---background__Diversos);
+    transition: border .5s ease;
+    font-family: var(---font_Texto);
+}
+
+.botonTipo:hover{
+    cursor: pointer;
+    border: 2px solid #F7CAC9;
+}
+
+/* ====================================  casas ==================================== */
+
+.containerImgCasas{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1rem;
+    margin: var(---margin_CambioSeccion);
+}
+/* Container de las imagenes */
+.ladosConjunto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+/* diseño imagenes */
+
+.casaAnimacion img, .casaAnimacion{
+    width: 420px;
+    height: 270px;
+}
+
+.casaAnimacion, .casaPeAnimacion{
+    background-color: rgba(0, 0, 0, 55%);  
+    backdrop-filter: blur(5spx);
+    position: relative;
+    display: flex;
+    justify-content: left;
+    transition: all 2s ease;
+    border-radius: 30px;
+}
+
+.textoTest{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: var(---weight_Letra);
+    font-family: var(---font_Texto);
+    margin: 2rem;
+    text-align: center;
+}
+
+.imgCasa{
+    position: absolute;
+    mix-blend-mode: soft-light;
+    border-radius: 30px;
+    transition: all 1s ease;
+}
+
+/* animaciones */
+.casaAnimacion:hover{
+    background-color: rgba(0, 0, 0, 0%);  
+}
+
+.imgCasa:hover{
+    transform: scale(1.02,1.02);
+}
+
+
+/* ---------------------------------- Comprar Pagina ---------------------------------- */
+
+/* Menu de filtros */
+
+.filtros{
+    width:80%;
+    margin: 2rem auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtro__container:nth-child(1){
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.filtro__container--Search{
+    border: none;
+    padding: .4rem 0rem .4rem 1rem;
+    width: 80%;
+    font-family: var(---font_Texto);
+    border-top: 1px solid #000;  
+    border-bottom: 1px solid #000;  
+    border-left: 1px solid #000;
+    outline: none;
+    font-size: 1rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.filtro__container--imgSearc{
+    width: 40%;   
+}
+
+.filtro__container:nth-child(1) div{
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0rem .5rem 0rem;
+    width: 3rem;  
+    border-top: 1px solid #000;  
+    border-bottom: 1px solid #000;  
+    border-right: 1px solid #000;  
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.filtro__container:nth-child(2){
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.filtro__container--boton{
+    width: 15%;
+    height: 2.5rem;
+    font-family: var(---font_Texto);
+    font-size: .9rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border:1px #000 solid;
+}
+
+.filtro__container--boton{
+    width: 15%;
+    height: 2.5rem;
+    font-family: var(---font_Texto);
+    font-size: .9rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border:1px #000 solid;
+}
+
+.filtro__container:nth-child(3){
+    width: 20%;
+}
+
+.filtro__container__settings{
+    width: 50%;
+    background-color: #fcefee;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: .7rem .5rem;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.filtro__container__settings--img{
+    width: 1.1rem;
+}
+
+.filtro__container__settings{
+    font-family: var(---font_Texto);
+    font-size: .95rem;
+}
+
+.filtro__container--boton:hover, .filtro__container__settings:hover{
+    cursor: pointer;
+}
+
+
+
+/* =============================== footer =============================== */
+
+
+footer{
+    margin-top: 10rem;
+    background-color: var(---background__Diversos);
+    padding: 2rem 0rem;
+}
+
+footer h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: var(---weight_Letra);
+    font-family: var(---font_Texto);
+
+}
+
+
