@@ -12,6 +12,7 @@
     ---border_Color : #7486a7;
     ---background__Diversos: #e7e3eb;
     ---margin_CambioSeccion : 10rem auto;
+    /* background-color: rgba(116, 134, 167, 10%); */
 }
 
 /* ==================================== features del header ==================================== */
@@ -365,7 +366,7 @@
     width: 20%;
 }
 
-.filtro__container--Search{
+.filtro__container__Search{
     border: none;
     padding: .4rem 0rem .4rem 1rem;
     width: 80%;
@@ -379,7 +380,7 @@
     border-bottom-left-radius: 20px;
 }
 
-.filtro__container--imgSearc{
+.filtro__container__imgSearc{
     width: 40%;   
 }
 
@@ -401,18 +402,8 @@
     justify-content: space-evenly;
 }
 
-.filtro__container--boton{
-    width: 15%;
-    height: 2.5rem;
-    font-family: var(---font_Texto);
-    font-size: .9rem;
-    background-color: #fff;
-    border-radius: 10px;
-    border:1px #000 solid;
-}
-
-.filtro__container--boton{
-    width: 15%;
+.filtro__container__boton{
+    width: 18%;
     height: 2.5rem;
     font-family: var(---font_Texto);
     font-size: .9rem;
@@ -427,29 +418,166 @@
 
 .filtro__container__settings{
     width: 50%;
-    background-color: #fcefee;
+    background-color: #f6baa3;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    padding: .7rem .5rem;
+    justify-content: center;
+    padding: .8rem 0rem;
     border-radius: 30px;
-    border: 1px solid #000;
+    gap: 1rem
 }
 
 .filtro__container__settings--img{
-    width: 1.1rem;
+    width: 9%;
 }
 
-.filtro__container__settings{
+.filtro__container__settings--texto{
     font-family: var(---font_Texto);
-    font-size: .95rem;
+    font-size: .9rem;
 }
 
 .filtro__container--boton:hover, .filtro__container__settings:hover{
     cursor: pointer;
 }
 
+/* Viviendas */
 
+.vivienda{
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+}
+
+
+.viviendaMuestra{
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+.viviendaMuestra__img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.viviendaFeature{
+    flex: 1.3;
+    background-color:rgba(116, 134, 167, 10%);
+    padding-left: 1rem;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom: 2px solid var(---border_Color);
+    border-top: 2px solid var(---border_Color);
+    border-right: 2px solid var(---border_Color);
+}
+
+.viviendaFeature__Inmobiliaria{
+    font-family: var(---font_Texto);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.viviendaFeature__direcion{
+    font-family: var(---font_Texto);
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+}
+
+.viviendaFeature__Costo{
+    margin-left:2rem ;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    border-bottom:2px solid rgba(0, 0, 0, 15%) ;
+}
+
+.viviendaFeature__Costo--Titulo{
+    font-family: var(---font_Texto);
+    font-size: 1rem;
+    color: rgba(0,0,0, 50%);
+}
+
+.viviendaFeature__Costo--Precio{
+    font-family: var(---font_Texto);
+    font-size: 1.4rem;
+    margin-left: 4rem;
+}
+
+.viviendaDatos{
+    width: 80%;
+    margin: 0 auto;   
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 1rem;
+}
+
+.viviendaDatos__container{
+    display: flex;
+    align-items: flex-end;
+}
+.viviendaDatos__iconos{
+    width: 12%;
+    margin-right: 3%;
+}
+.viviendaVecindario{
+    padding-top: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 1rem;
+    padding: 2rem 0rem;
+    border-bottom:2px solid rgba(0, 0, 0, 15%) ;
+}
+
+.viviendaVecindario__Container{
+    width: 80%;
+    height: 100%rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.viviendaVecindario__Container p{
+    font-family: var(---font_Titulos);
+    font-size: .75rem;
+    padding: .5rem 0rem;
+}
+
+.viviendaContacto{
+    display: flex;
+    padding-top: 1rem;
+    justify-content: right;
+    width: 70%;
+    margin: 0 auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.viviendaContacto__Whats{
+    width: 7%;
+}
+
+.viviendaContacto__Boton{
+    border: none;
+    width: 20%;
+    height: 2.4rem;
+    font-family: var(---font_Texto);
+    font-size: .9rem;
+    border-radius: 10px;
+    background: #f6baa3;
+    color: #000;
+    font-weight: 400;
+}
 
 /* =============================== footer =============================== */
 
