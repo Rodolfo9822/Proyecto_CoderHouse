@@ -1,74 +1,81 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-:root{
-    ---font_Titulos : 'Sono', sans-serif;
+:root {
+    ---font_Titulos: 'Sono', sans-serif;
     ---backgroundColor_Anuncios: #b3b8d3;
     ---weight_Letra: 400;
-    ---font_Texto : 'Noto Serif', serif;
-    ---background_SoloTieneUnUso : #a7b9da;
-    ---border_Color : #7486a7;
+    ---font_Texto: 'Noto Serif', serif;
+    ---background_SoloTieneUnUso: #a7b9da;
+    ---border_Color: #7486a7;
     ---background__Diversos: #e7e3eb;
-    ---margin_CambioSeccion : 10rem auto;
+    ---margin_CambioSeccion: 10rem auto;
     /* background-color: rgba(116, 134, 167, 10%); */
 }
 
 /* ==================================== features del header ==================================== */
 /* anuncion */
 
-.espacioHeader{
+.espacioHeader {
     padding: .2rem 0rem;
     background-color: rgba(116, 134, 167, 10%);
 }
 
-.anuncio{
+.anuncio {
     background-color: var(---backgroundColor_Anuncios);
     padding: .7rem 0rem;
     margin-bottom: 1rem;
     border-bottom: .12rem black solid;
 }
 
-.anuncioTexto{
+.anuncioTexto {
     font-family: var(---font_Titulos);
     text-align: center;
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: var(---weight_Letra);
+}
+
+@media (min-width: 1024px) {
+    .anuncioTexto {
+        font-size: 1.1rem;
+    }
 }
 
 /* barra de navegacion */
 
-.nav{
+.nav {
     display: flex;
-    width: 70%;
+    width: 100%;
     margin: 1rem auto;
-    
+    align-items: center;
+    flex-direction: column;
 }
 
-.empresa{
+.empresa {
     display: flex;
     align-items: flex-end;
-    width: 30%
 }
 
-.empresaLogo{
+.empresaLogo {
     width: 50px;
 }
 
-.empresaNombre{
+.empresaNombre {
     font-size: 1.3rem;
     margin-left: .3rem;
 }
 
-.enlaces{
+.enlaces {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 60%;
-    justify-content: space-between;
+    width: 90%;
 }
 
-.link, .acuentalink{
+.link,
+.acuentalink {
     font-family: var(---font_Titulos);
     text-decoration: none;
     color: #000;
@@ -76,72 +83,140 @@
     font-size: 1rem;
 }
 
-.login{
+.login {
     background-color: var(---background_SoloTieneUnUso);
     padding: .7rem .9rem;
     border-radius: 16px;
     display: flex;
+    justify-content: center;
 }
 
-.loginLine{
+.loginLine {
     border-left: .15rem black solid;
     margin: 0 .5rem;
 }
 
+.acuentalink {
+    align-self: center;
+}
+
+.empresa,
+.enlaces,
+.login {
+    margin-bottom: 1.5rem;
+}
+
+.link {
+    margin-bottom: 1rem;
+}
+
 /* animaciones */
-.link:hover{
+.link:hover {
     border-bottom: 1.5px solid black;
 }
 
+/* Media Queries */
+
+@media (min-width: 540px) {
+    .enlaces {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .link {
+        margin-bottom: 0rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        width: 95%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .empresa,
+    .enlaces,
+    .login {
+        margin-bottom: 0rem;
+    }
+
+    .enlaces {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .nav {
+        width: 70%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .empresa,
+    .enlaces,
+    .login {
+        margin-bottom: 0rem;
+    }
+
+    .enlaces {
+        width: 50%;
+    }
+}
+
+
 /* ==================================== features del menu de busqueda de index ==================================== */
 
-.imagenBusqueda{
+.imagenBusqueda {
     background-image: url('../img/vecindario.jpeg');
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
-    height: 50rem;
-    width: 97%;
+    height: 35rem;
+    width: 90%;
     border-radius: 30px;
 }
 
-.posicionarBusqueda{
+.posicionarBusqueda {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.containerBusqueda{
-    width: 50%;
-    height: 60%;
+.containerBusqueda {
+    width: 90%;
+    height: 80%;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, .15);  
+    background-color: rgba(255, 255, 255, .15);
     backdrop-filter: blur(5px);
 }
 
-.containerBusqueda h2{
+.containerBusqueda h2 {
     font-family: var(---font_Titulos);
     font-weight: var(---weight_Letra);
     text-align: center;
-    padding: 5rem 0rem;
-    font-size: 3rem;
+    padding: 2rem 0rem;
+    font-size: 2rem;
     color: #000;
 }
 
-.elementosBusqueda{
+.elementosBusqueda {
     width: 90%;
     margin: 0 auto;
 }
+
 /* Botones de busqueda */
-.elementosBusqueda div:nth-child(1){
+.elementosBusqueda div:nth-child(1) {
     width: 80%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 }
 
-.botonBusqueda{
+.botonBusqueda {
     text-decoration: none;
     color: #fff;
     font-family: var(---font_Titulos);
@@ -152,18 +227,19 @@
     background-color: rgba(0, 0, 0, 60%);
     border: 2px #fff solid;
     transition: all 1s ease;
+    margin-bottom: 1rem;
 }
 
-.botonBusqueda:hover{
+.botonBusqueda:hover {
     color: #000;
-    background-color: rgba(167,185,218, 60%);
+    background-color: rgba(167, 185, 218, 60%);
     border: 2px var(---background__Diversos) solid;
 }
 
 
 
 /* Barra de busqueda y su boton */
-.elementosBusqueda div:nth-child(2){
+.elementosBusqueda div:nth-child(2) {
     height: 3rem;
     margin-top: 1.5rem;
     display: flex;
@@ -171,108 +247,174 @@
     justify-content: center;
 }
 
-.searchBar{
-    width: 60%;
+.searchBar {
+    width: 70%;
     border-top: 2px black solid;
     border-bottom: 2px black solid;
     border-left: 2px black solid;
     border-right: none;
     font-size: 1.2rem;
     padding: 1.2rem 1rem 1.2rem 1rem;
-    /* padding: 1.32rem 1rem 1.65rem 1rem; resoluciones mayores a 1080 */
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     outline: none;
 }
 
-.searchButton{
+.searchButton {
     border-top: 2px black solid;
     border-bottom: 2px black solid;
     border-right: 2px black solid;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-left: none;
-    padding: 1.4rem .5rem 1.2rem .5rem;
+    padding: 1.35rem .5rem 1.2rem .5rem;
     width: 15%;
     font-family: var(---font_Titulos);
     font-weight: var(---weight_Letra);
     font-size: 1rem;
 }
 
-.searchButton, .searchBar{
+.searchButton,
+.searchBar {
     background-color: white;
 }
 
-.searchButton:hover{
+.searchButton:hover {
     cursor: pointer;
+}
+
+/* media Query */
+
+
+@media (min-width: 768px) {
+    .imagenBusqueda {
+        width: 90%;
+    }
+
+    .elementosBusqueda div:nth-child(1) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .botonBusqueda {
+        margin-bottom: 0rem;
+    }
+
+    .containerBusqueda {
+        height: 60%;
+    }
+
+    .containerBusqueda h2 {
+        font-size: 3rem;
+        padding: 3rem 0rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .imagenBusqueda {
+        width: 90%;
+        height: 45rem;
+    }
+
+    .containerBusqueda {
+        width: 60%;
+    }
+
+    .containerBusqueda h2 {
+        font-size: 3rem;
+        padding: 5rem 0rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .searchBar {
+        width: 60%;
+    }
+
+    .containerBusqueda {
+        width: 50%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .imagenBusqueda {
+        height: 55rem;
+    }
+
+    .searchBar {
+        width: 50%;
+    }
 }
 
 
 /* ==================================== caracteristicas de los lugares  ==================================== */
 
-.caracteristicas{
-    width: 70%;
+.caracteristicas {
+    width: 80%;
     margin: var(---margin_CambioSeccion);
-    height: 55rem;
     transition: all 1s ease-out;
 }
 
-.caracteristicas:hover{
+.caracteristicas:hover {
     transform: translateY(-20px);
     border-bottom-left-radius: 70px;
     border-bottom-right-radius: 70px;
-    box-shadow: 0px 30px 14px 0px rgba(0,0,0,0.58);
+    box-shadow: 0px 30px 14px 0px rgba(0, 0, 0, 0.58);
 }
 
-.tituloCaracte{
+.tituloCaracte {
     text-align: center;
     font-family: var(---font_Titulos);
     font-weight: var(---weight_Letra);
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     margin-bottom: 5rem;
 }
 
-.tipoCaracte{
+.tipoCaracte {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1.5rem;
 }
 
-.tipoContainer{
+.tipoContainer {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.imgTipo, .tituloTipo, .textoTipo, .botonTipo{
+.imgTipo,
+.tituloTipo,
+.textoTipo,
+.botonTipo {
     margin-bottom: 1.5rem;
 }
 
-.imgTipo{
-    width: 30%;
+.imgTipo {
+    width: 20%;
 }
 
-.tituloTipo{
+.tituloTipo {
     font-size: 1.3rem;
     font-weight: var(---weight_Letra);
     font-family: var(---font_Texto);
 }
 
-.containerTextoTipo{
+.containerTextoTipo {
     width: 60%;
     margin: 0 auto;
 }
 
-.textoTipo{
+.textoTipo {
     font-family: var(---font_Texto);
     font-size: 1rem;
     text-align: justify;
 }
 
-.botonTipo{
-    width: 40%;
-    height: 3.8rem;
-    font-size: 1rem;
+.botonTipo {
+    width: 30%;
+    height: 3.5rem;
+    font-size: .9rem;
     border-radius: 20px;
     border: 2px solid var(---border_Color);
     background-color: var(---background__Diversos);
@@ -280,23 +422,71 @@
     font-family: var(---font_Texto);
 }
 
-.botonTipo:hover{
+.botonTipo:hover {
     cursor: pointer;
     border: 2px solid #F7CAC9;
 }
 
+/* media Query */
+
+@media (min-width: 1024px) {
+    .tipoCaracte {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .caracteristicas {
+        width: 90%;
+        height: 55rem;
+    }
+
+    .botonTipo {
+        width: 60%;
+    }
+
+    .imgTipo {
+        width: 30%;
+    }
+
+    .tituloCaracte {
+        font-size: 2.3rem;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .caracteristicas {
+        width: 90%;
+    }
+
+    .botonTipo {
+        width: 40%;
+    }
+}
+
+
+@media (min-width: 1920px) {
+    .caracteristicas {
+        width: 70%;
+    }
+}
+
+@media (min-width: 2000px) {}
+
+
+
 /* ====================================  casas ==================================== */
 
-.containerImgCasas{
+.containerImgCasas {
     width: 95%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    column-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
     margin: var(---margin_CambioSeccion);
 }
+
 /* Container de las imagenes */
-.ladosConjunto{
+.ladosConjunto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,13 +497,15 @@
 
 /* diseño imagenes */
 
-.casaAnimacion img, .casaAnimacion{
+.casaAnimacion img,
+.casaAnimacion {
     width: 420px;
     height: 270px;
 }
 
-.casaAnimacion, .casaPeAnimacion{
-    background-color: rgba(0, 0, 0, 55%);  
+.casaAnimacion,
+.casaPeAnimacion {
+    background-color: rgba(0, 0, 0, 55%);
     backdrop-filter: blur(5spx);
     position: relative;
     display: flex;
@@ -322,7 +514,7 @@
     border-radius: 30px;
 }
 
-.textoTest{
+.textoTest {
     color: white;
     font-size: 1.2rem;
     font-weight: var(---weight_Letra);
@@ -331,7 +523,7 @@
     text-align: center;
 }
 
-.imgCasa{
+.imgCasa {
     position: absolute;
     mix-blend-mode: soft-light;
     border-radius: 30px;
@@ -339,40 +531,59 @@
 }
 
 /* animaciones */
-.casaAnimacion:hover{
-    background-color: rgba(0, 0, 0, 0%);  
+.casaAnimacion:hover {
+    background-color: rgba(0, 0, 0, 0%);
 }
 
-.imgCasa:hover{
-    transform: scale(1.02,1.02);
+.imgCasa:hover {
+    transform: scale(1.02, 1.02);
 }
+
+
+/* media Query */
+
+@media (min-width: 1024px) {
+    .containerImgCasas {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1600px) {
+    .containerImgCasas {
+        width: 95%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 
 
 /* ---------------------------------- Comprar Pagina ---------------------------------- */
 
 /* Menu de filtros */
 
-.filtros{
-    width:80%;
-    margin: 2rem auto ;
+.filtros {
+    width: 80%;
+    margin: 2rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.filtro__container:nth-child(1){
+.filtro__container:nth-child(1) {
     display: flex;
     align-items: center;
     width: 20%;
 }
 
-.filtro__container__Search{
+.filtro__container__Search {
     border: none;
     padding: .4rem 0rem .4rem 1rem;
     width: 80%;
     font-family: var(---font_Texto);
-    border-top: 1px solid #000;  
-    border-bottom: 1px solid #000;  
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
     border-left: 1px solid #000;
     outline: none;
     font-size: 1rem;
@@ -380,43 +591,43 @@
     border-bottom-left-radius: 20px;
 }
 
-.filtro__container__imgSearc{
-    width: 40%;   
+.filtro__container__imgSearc {
+    width: 40%;
 }
 
-.filtro__container:nth-child(1) div{
+.filtro__container:nth-child(1) div {
     display: flex;
     justify-content: center;
     padding: .5rem 0rem .5rem 0rem;
-    width: 3rem;  
-    border-top: 1px solid #000;  
-    border-bottom: 1px solid #000;  
-    border-right: 1px solid #000;  
+    width: 3rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.filtro__container:nth-child(2){
+.filtro__container:nth-child(2) {
     display: flex;
     width: 40%;
     justify-content: space-evenly;
 }
 
-.filtro__container__boton{
+.filtro__container__boton {
     width: 18%;
     height: 2.5rem;
     font-family: var(---font_Texto);
     font-size: .9rem;
     background-color: #fff;
     border-radius: 10px;
-    border:1px #000 solid;
+    border: 1px #000 solid;
 }
 
-.filtro__container:nth-child(3){
+.filtro__container:nth-child(3) {
     width: 20%;
 }
 
-.filtro__container__settings{
+.filtro__container__settings {
     width: 50%;
     background-color: #f6baa3;
     display: flex;
@@ -427,44 +638,45 @@
     gap: 1rem
 }
 
-.filtro__container__settings--img{
+.filtro__container__settings--img {
     width: 9%;
 }
 
-.filtro__container__settings--texto{
+.filtro__container__settings--texto {
     font-family: var(---font_Texto);
     font-size: .9rem;
 }
 
-.filtro__container--boton:hover, .filtro__container__settings:hover{
+.filtro__container--boton:hover,
+.filtro__container__settings:hover {
     cursor: pointer;
 }
 
 /* Viviendas */
 
-.vivienda{
+.vivienda {
     width: 80%;
     margin: 2rem auto;
     display: flex;
 }
 
 
-.viviendaMuestra{
+.viviendaMuestra {
     flex: 1;
     display: flex;
     justify-content: right;
 }
 
-.viviendaMuestra__img{
+.viviendaMuestra__img {
     width: 100%;
     height: 100%;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
 
-.viviendaFeature{
+.viviendaFeature {
     flex: 1.3;
-    background-color:rgba(116, 134, 167, 10%);
+    background-color: rgba(116, 134, 167, 10%);
     padding-left: 1rem;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -473,7 +685,7 @@
     border-right: 2px solid var(---border_Color);
 }
 
-.viviendaFeature__Inmobiliaria{
+.viviendaFeature__Inmobiliaria {
     font-family: var(---font_Texto);
     text-align: center;
     padding: 2rem;
@@ -481,50 +693,52 @@
     font-weight: 400;
 }
 
-.viviendaFeature__direcion{
+.viviendaFeature__direcion {
     font-family: var(---font_Texto);
     text-align: center;
     font-size: 1.1rem;
     padding-bottom: 1rem;
 }
 
-.viviendaFeature__Costo{
-    margin-left:2rem ;
+.viviendaFeature__Costo {
+    margin-left: 2rem;
     width: 80%;
     margin: 0 auto;
     padding-bottom: 1rem;
-    border-bottom:2px solid rgba(0, 0, 0, 15%) ;
+    border-bottom: 2px solid rgba(0, 0, 0, 15%);
 }
 
-.viviendaFeature__Costo--Titulo{
+.viviendaFeature__Costo--Titulo {
     font-family: var(---font_Texto);
     font-size: 1rem;
-    color: rgba(0,0,0, 50%);
+    color: rgba(0, 0, 0, 50%);
 }
 
-.viviendaFeature__Costo--Precio{
+.viviendaFeature__Costo--Precio {
     font-family: var(---font_Texto);
     font-size: 1.4rem;
     margin-left: 4rem;
 }
 
-.viviendaDatos{
+.viviendaDatos {
     width: 80%;
-    margin: 0 auto;   
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding-top: 1rem;
 }
 
-.viviendaDatos__container{
+.viviendaDatos__container {
     display: flex;
     align-items: flex-end;
 }
-.viviendaDatos__iconos{
+
+.viviendaDatos__iconos {
     width: 12%;
     margin-right: 3%;
 }
-.viviendaVecindario{
+
+.viviendaVecindario {
     padding-top: 2rem;
     width: 80%;
     margin: 0 auto;
@@ -533,10 +747,10 @@
     grid-template-rows: repeat(2, 1fr);
     row-gap: 1rem;
     padding: 2rem 0rem;
-    border-bottom:2px solid rgba(0, 0, 0, 15%) ;
+    border-bottom: 2px solid rgba(0, 0, 0, 15%);
 }
 
-.viviendaVecindario__Container{
+.viviendaVecindario__Container {
     width: 80%;
     height: 100%rem;
     display: flex;
@@ -547,13 +761,13 @@
     border: 1px solid #000;
 }
 
-.viviendaVecindario__Container p{
+.viviendaVecindario__Container p {
     font-family: var(---font_Titulos);
     font-size: .75rem;
     padding: .5rem 0rem;
 }
 
-.viviendaContacto{
+.viviendaContacto {
     display: flex;
     padding-top: 1rem;
     justify-content: right;
@@ -563,11 +777,11 @@
     align-items: center;
 }
 
-.viviendaContacto__Whats{
+.viviendaContacto__Whats {
     width: 7%;
 }
 
-.viviendaContacto__Boton{
+.viviendaContacto__Boton {
     border: none;
     width: 20%;
     height: 2.4rem;
@@ -582,7 +796,7 @@
 /* =============================== footer =============================== */
 
 
-footer{
+footer {
     margin-top: 10rem;
     background-color: var(---background__Diversos);
     padding: 2rem 0rem;
@@ -595,5 +809,3 @@ footer h3 {
     font-family: var(---font_Texto);
 
 }
-
-
