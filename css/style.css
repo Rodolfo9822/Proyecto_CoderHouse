@@ -564,9 +564,9 @@
 /* Menu de filtros */
 
 .filtros {
-    width: 80%;
     margin: 2rem auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -574,7 +574,7 @@
 .filtro__container:nth-child(1) {
     display: flex;
     align-items: center;
-    width: 20%;
+    /* width: 20%; */
 }
 
 .filtro__container__Search {
@@ -596,8 +596,6 @@
 }
 
 .filtro__container:nth-child(1) div {
-    display: flex;
-    justify-content: center;
     padding: .5rem 0rem .5rem 0rem;
     width: 3rem;
     border-top: 1px solid #000;
@@ -609,22 +607,21 @@
 
 .filtro__container:nth-child(2) {
     display: flex;
-    width: 40%;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .filtro__container__boton {
-    width: 18%;
+    width: 50%;
     height: 2.5rem;
     font-family: var(---font_Texto);
     font-size: .9rem;
     background-color: #fff;
     border-radius: 10px;
     border: 1px #000 solid;
-}
+    margin-bottom: 1.5rem;
 
-.filtro__container:nth-child(3) {
-    width: 20%;
 }
 
 .filtro__container__settings {
@@ -652,12 +649,77 @@
     cursor: pointer;
 }
 
+.filtro__container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    width: 50%;
+}
+
+/* media queries */
+
+@media (min-width: 540px) {
+    .filtro__container__boton {
+        width: 30%;
+    }
+}
+
+@media (min-width: 900px) {
+    .filtro__container:nth-child(2) {}
+
+    .filtro__container__boton {
+        width: 18%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .filtro__container:nth-child(2) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1200px) {
+    .filtros {
+        flex-direction: row;
+    }
+
+    .filtro__container {
+        margin-bottom: 0rem;
+    }
+
+    .filtro__container:nth-child(1) {
+        width: 20%;
+    }
+
+    .filtro__container:nth-child(2) {
+        width: 40%;
+    }
+
+    .filtro__container:nth-child(3) {
+        width: 30%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .filtro__container:nth-child(3) {
+        width: 20%;
+    }
+
+    .filtros {
+        width: 80%;
+    }
+}
+
+
+
 /* Viviendas */
 
 .vivienda {
     width: 80%;
     margin: 2rem auto;
     display: flex;
+    flex-direction: column;
 }
 
 
@@ -670,19 +732,17 @@
 .viviendaMuestra__img {
     width: 100%;
     height: 100%;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
+    border-radius : 30px;
+    margin-bottom: .5rem;
 }
 
 .viviendaFeature {
     flex: 1.3;
     background-color: rgba(116, 134, 167, 10%);
     padding-left: 1rem;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    border-bottom: 2px solid var(---border_Color);
-    border-top: 2px solid var(---border_Color);
-    border-right: 2px solid var(---border_Color);
+    border-radius : 30px;
+    border: 2px solid var(---border_Color);
+    padding-bottom: 3rem;
 }
 
 .viviendaFeature__Inmobiliaria {
@@ -724,13 +784,14 @@
     width: 80%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     padding-top: 1rem;
+    row-gap: 1rem;
 }
 
 .viviendaDatos__container {
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
 }
 
 .viviendaDatos__iconos {
@@ -740,10 +801,10 @@
 
 .viviendaVecindario {
     padding-top: 2rem;
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 1rem;
     padding: 2rem 0rem;
@@ -751,7 +812,7 @@
 }
 
 .viviendaVecindario__Container {
-    width: 80%;
+    width: 95%;
     height: 100%rem;
     display: flex;
     justify-content: center;
@@ -778,12 +839,12 @@
 }
 
 .viviendaContacto__Whats {
-    width: 7%;
+    width: 2rem;
 }
 
 .viviendaContacto__Boton {
     border: none;
-    width: 20%;
+    width: 6rem;
     height: 2.4rem;
     font-family: var(---font_Texto);
     font-size: .9rem;
@@ -791,6 +852,99 @@
     background: #f6baa3;
     color: #000;
     font-weight: 400;
+}
+
+/* media queries */
+@media (min-width: 480px) {
+    .viviendaVecindario__Container {
+        width: 75%;
+    }
+    .viviendaDatos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+
+    .vivienda {
+        width: 90%;
+    }
+
+    .viviendaMuestra__img {
+        border-radius: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        margin-bottom: 0rem;
+    }
+    
+    .viviendaFeature {
+        border-radius: 0;
+        border-bottom: 2px solid var(---border_Color);
+        border-top: 2px solid var(---border_Color);
+        border-right: 2px solid var(---border_Color);
+    }
+
+    .vivienda {
+        flex-direction: row;
+    }
+    .viviendaVecindario {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+    .viviendaVecindario__Container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .viviendaVecindario__Container {
+        width: 60%;
+    }
+
+    .viviendaVecindario__Container p {
+        font-size: .7rem;
+    }
+    .viviendaDatos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .viviendaVecindario {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+
+    .viviendaVecindario__Container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .vivienda {
+        width: 80%;
+    }
+
+    .viviendaVecindario {
+        grid-template-columns: repeat(4, 1fr);
+        width: 80%;
+    }
+
+    .viviendaVecindario__Container {
+        width: 80%;
+    }
+
+    .viviendaVecindario__Container p {
+        font-size: .75rem;
+    }
+}
+
+@media (min-width: 2200px) {
+    .vivienda {
+        width: 70%;
+        height: 32rem
+    }
 }
 
 /* =============================== footer =============================== */
@@ -809,3 +963,63 @@ footer h3 {
     font-family: var(---font_Texto);
 
 }
+
+
+
+/* ================================ pagina nosotros ================================*/
+
+.nosotros{
+    width: 80%;
+    margin: 5rem auto 0 auto;
+
+}
+
+.nosotros h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.nosotros p{
+    text-align: justify;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* ================================ pagina opiniones ================================*/
+
+.opinion{
+    width: 80%;
+    margin: 5rem auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 2rem;
+}
+
+.contenedorOpinion {
+    display: flex;
+}
+
+.contenedorOpinion img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+.contenedorOpinion div{
+    width: 45%;
+    margin-left: 3rem;
+}
+
+.contenedorOpinion div h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contenedorOpinion div p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
